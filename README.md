@@ -13,7 +13,7 @@ Convert any give XSD To JSON schema
 
 ## How to Install
 
-1. Install npm package ngx-xml-message.
+1. Install npm package xsd-json-converter.
 
 ```console
     npm i xsd-json-converter
