@@ -1,11 +1,11 @@
 {
   "name": "xsd-json-converter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Convert XSD to JSON",
   "main": "index.js",
   "private": false,
   "bin": {
-    "xsd-json-converter": "./index.js"
+    "xjc": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
