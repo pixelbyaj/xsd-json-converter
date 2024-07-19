@@ -15,12 +15,12 @@ Convert any given XSD To JSON schema
 
 1. Install npm package xsd-json-converter.
 
-Global
+Global (For CLI)
 ```console
     npm install -g xsd-json-converter
 ```
 
-Local
+Local (For SCRIPT/CLI)
 ```console
     npm install xsd-json-converter
 ```
@@ -51,6 +51,7 @@ xsd.convert('./camt.053.001.10.xsd')
 .then(output => console.log(output))
   .catch(error => console.error(error));
 ```
+**NOTE**: For script please install the package locally
 
 ## Supported OS
 
