@@ -1,40 +1,21 @@
 #!/usr/bin/env node
 
 const { spawn } = require('child_process');
-const path = require('path');
-const os = require('os');
-const platform = os.platform();
+const { getAppPath, getPlatform } = require('./platform');
 const fs = require('fs');
 
-let converterAppPath;
 
-// Determine the correct executable path based on the platform
-switch (platform) {
-    case 'win32':
-        converterAppPath = path.join(__dirname, 'tools','win-x64', 'XSDConverter.exe');
-        break;
-    case 'linux':
-        converterAppPath = path.join(__dirname, 'tools','linux-x64', 'XSDConverter');
-        break;
-    case 'darwin': // macOS
-        converterAppPath = path.join(__dirname, 'tools','osx-x64', 'XSDConverter');
-        break;
-    default:
-        console.error('Unsupported OS');
-        process.exit(1);
-}
-
+const converterAppPath = getAppPath();
 // Ensure the executable has proper permissions on Unix-like systems
-if (platform !== 'win32') {
+if (getPlatform() !== 'win32') {
     fs.chmodSync(converterAppPath, '755');
 }
 
 // Capture command-line arguments passed to the Node.js script
 const args = process.argv.slice(2);
 
-if(args === 0 || args.length > 2)
-{
-    console.error('Usage: xsd-json-converter <source-path> <output-path>');
+if (args.length != 2) {
+    console.error('Usage: xjc <source-path> <output-path>');
     process.exit(1);
 }
 //Capture output path

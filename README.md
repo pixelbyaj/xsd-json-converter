@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dm/xsd-json-converter)](https://npmjs.org/package/xsd-json-converter)
 
 # xsd-json-converter (xjc)
-Convert any give XSD To JSON schema
+Convert any given XSD To JSON schema
 
 ## Features
 
@@ -15,27 +15,41 @@ Convert any give XSD To JSON schema
 
 1. Install npm package xsd-json-converter.
 
+Global
 ```console
-    npm i xsd-json-converter
+    npm install -g xsd-json-converter
+```
+
+Local
+```console
+    npm install xsd-json-converter
 ```
 
 ## How to Use
 
+### CLI
 ```console
 xjc <source-path> <output-path>
-
 ```
 
-### Example
-#### Linux
+#### Example
+##### Linux
 
 ```console
 xjc /mnt/c/source/xsd/camt.053.001.10.xsd /mnt/c/source/xsd/camt.053.json 
 ```
 
-#### Windows
+##### Windows
 ```console
 xjc C:/source/xsd/camt.053.001.10.xsd C:/source/xsd/camt.053.json 
+```
+### Script
+```js
+const xsd = require('xsd-json-converter');
+
+xsd.convert('./camt.053.001.10.xsd')
+.then(output => console.log(output))
+  .catch(error => console.error(error));
 ```
 
 ## Supported OS

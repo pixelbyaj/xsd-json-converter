@@ -2,7 +2,7 @@
   "name": "xsd-json-converter",
   "version": "1.0.1",
   "description": "Convert XSD to JSON",
-  "main": "index.js",
+  "main": "main.js",
   "private": false,
   "bin": {
     "xjc": "./index.js"
