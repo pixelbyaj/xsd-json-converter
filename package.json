@@ -1,12 +1,16 @@
 {
   "name": "xsd-json-converter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Convert XSD to JSON",
-  "main": "main.js",
   "private": false,
+  "main": "main.js",
+  "types": "dist/main.d.ts",
   "bin": {
-    "xjc": "./index.js"
+    "xjc": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixelbyaj/xsd-json-converter.git"
@@ -22,5 +26,18 @@
   "bugs": {
     "url": "https://github.com/pixelbyaj/xsd-json-converter/issues"
   },
-  "homepage": "https://github.com/pixelbyaj/xsd-json-converter#readme"
+  "homepage": "https://github.com/pixelbyaj/xsd-json-converter#readme",
+  "scripts": {
+    "build": "tsc && npm run copy-tools",
+    "copy-tools": "node ./copy.js",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "cpx": "^1.5.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "xsd-json-converter": "^1.1.1-beta.2"
+  }
 }

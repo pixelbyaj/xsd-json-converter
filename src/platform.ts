@@ -1,9 +1,8 @@
-const path = require('path');
-const os = require('os');
+import path from 'path';
+import os from 'os';
 const platform = os.platform();
-const fs = require('fs');
 
-const getAppPath = () => {
+export const getAppPath = () => {
     let converterAppPath;
 
     // Determine the correct executable path based on the platform
@@ -24,11 +23,6 @@ const getAppPath = () => {
     return converterAppPath;
 }
 
-const getPlatform = () => {
+export const getPlatform = () => {
     return platform;
-}
-
-module.exports = {
-    getAppPath,
-    getPlatform
 }

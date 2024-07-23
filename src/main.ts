@@ -1,13 +1,9 @@
-const { spawn } = require('child_process');
-const { getAppPath, getPlatform } = require('./platform');
+import { spawn } from 'child_process';
+import { getAppPath, getPlatform } from './platform';
+import * as fs from 'fs';
 
 const xsd = {
-    /**
-     * Executes a command and returns the standard output.
-     * @param {string} fileName - The xsd filename.
-     * @returns {Promise<string>} - A promise that resolves with the standard output of the command.
-    */
-    convert: (fileName) => {
+    convert: (fileName: string): Promise<any> => {
         return new Promise((resolve, reject) => {
             const converterAppPath = getAppPath();
             if (getPlatform() !== 'win32') {
@@ -37,9 +33,7 @@ const xsd = {
                 }
             });
         });
-
-        return promise;
     }
 }
 
-module.exports = xsd;
+export default xsd;

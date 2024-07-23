@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
-const { getAppPath, getPlatform } = require('./platform');
-const fs = require('fs');
+import { spawn } from 'child_process';
+import { getAppPath, getPlatform } from './platform';
+import fs = require('fs');
 
 
 const converterAppPath = getAppPath();
@@ -39,7 +39,7 @@ appProcess.stderr.on('data', (data) => {
 appProcess.on('close', (code) => {
     if (code === 0) {
         // Write the output to the specified file
-        fs.writeFileSync(outputPath, outputData, 'utf8');
+        fs.writeFileSync(outputPath as any, outputData, 'utf8');
         console.log(`Output written to ${outputPath}`);
     } else {
         console.error(`application exited with code ${code}`);
