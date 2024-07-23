@@ -1,10 +1,11 @@
 
+# xsd-json-converter (xjc)
+Convert any given XSD To JSON schema
+
 ![npm](https://img.shields.io/npm/v/xsd-json-converter)
 ![NPM](https://img.shields.io/npm/l/xsd-json-converter)
 [![npm](https://img.shields.io/npm/dm/xsd-json-converter)](https://npmjs.org/package/xsd-json-converter)
 
-# xsd-json-converter (xjc)
-Convert any given XSD To JSON schema
 
 ## Features
 
