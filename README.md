@@ -45,8 +45,19 @@ xjc /mnt/c/source/xsd/camt.053.001.10.xsd /mnt/c/source/xsd/camt.053.json
 xjc C:/source/xsd/camt.053.001.10.xsd C:/source/xsd/camt.053.json 
 ```
 ### Script
+JavaScript
 ```js
-const xsd = require('xsd-json-converter');
+const xsd = require('xsd-json-converter').default;
+
+xsd.convert('./camt.053.001.10.xsd')
+.then(output => console.log(output))
+  .catch(error => console.error(error));
+```
+
+TypeScript
+```ts
+import xsd from "xsd-json-converter";
+
 
 xsd.convert('./camt.053.001.10.xsd')
 .then(output => console.log(output))
