@@ -1,6 +1,6 @@
 {
   "name": "xsd-json-converter",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Convert XSD to JSON",
   "private": false,
   "main": "dist/main.js",
