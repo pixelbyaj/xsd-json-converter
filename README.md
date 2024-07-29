@@ -73,7 +73,13 @@ xsd.convert('./camt.053.001.10.xsd')
 
 ## Generated Schema
 ```ts
-export interface Schema {
+export interface XsdSchema
+{
+  namespace:string;
+  SchemaElement:SchemaElement
+}
+
+export interface SchemaElement {
     id: string;
     name: string;
     dataType: string | null;
@@ -90,5 +96,31 @@ export interface Schema {
     isCurrency: boolean | null;
     xpath: string | null;
     elements: Schema[];
+}
+```
+### Example
+```json
+{
+    "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.053.001.10",
+    "schemaElement": {
+        "id": "Document",
+        "name": "Document",
+        "dataType": null,
+        "minOccurs": "1",
+        "maxOccurs": null,
+        "minLength": null,
+        "maxLength": null,
+        "pattern": null,
+        "fractionDigits": null,
+        "totalDigits": null,
+        "minInclusive": null,
+        "maxInclusive": null,
+        "values": null,
+        "isCurrency": false,
+        "xpath": "Document",
+        "elements":[
+          ...
+        ]
+    }
 }
 ```
