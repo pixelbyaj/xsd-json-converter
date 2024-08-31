@@ -92,6 +92,8 @@ export interface SchemaElement {
     totalDigits: string | null;
     minInclusive: string | null;
     maxInclusive: string | null;
+    minExclusive: string | null;
+    maxExclusive: string | null;
     values: string[] | null;
     isCurrency: boolean | null;
     xpath: string | null;
