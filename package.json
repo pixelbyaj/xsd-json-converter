@@ -1,6 +1,6 @@
 {
   "name": "xsd-json-converter",
-  "version": "1.2.7",
+  "version": "2.1.0",
   "description": "Convert XSD to JSON",
   "private": false,
   "main": "dist/main.js",
@@ -11,6 +11,7 @@
   "files": [
     "dist"
   ],
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixelbyaj/xsd-json-converter.git"
@@ -19,14 +20,19 @@
     "xsd",
     "json",
     "converter",
-    "xsdtojsonconverter"
+    "xsdtojsonconverter",
+    "iso20022",
+    "swiftmx"
   ],
-  "author": "Abhishek Joshi (aka pixelbyaj)",
+  "author": {
+    "name":"Abhishek Joshi (aka pixelbyaj)",
+    "url": "https://swiftmx.co/xsd-json-converter"
+},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pixelbyaj/xsd-json-converter/issues"
   },
-  "homepage": "https://github.com/pixelbyaj/xsd-json-converter#readme",
+  "homepage": "https://swiftmx.co/xsd-json-converter",
   "scripts": {
     "build": "tsc && npm run copy-tools",
     "copy-tools": "node ./copy.js",
