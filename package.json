@@ -1,6 +1,6 @@
 {
   "name": "xsd-json-converter",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Convert XSD to JSON",
   "private": false,
   "main": "dist/main.js",
@@ -8,10 +8,10 @@
   "bin": {
     "xjc": "dist/index.js"
   },
+  "type": "module",
   "files": [
     "dist"
   ],
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixelbyaj/xsd-json-converter.git"
@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.11",
-    "cpx": "^1.5.0",
     "typescript": "^5.5.4"
   }
 }
